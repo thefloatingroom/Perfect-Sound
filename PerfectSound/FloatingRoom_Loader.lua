@@ -1,8 +1,12 @@
 -- @description FloatingRoom
 -- @version 1.0.0
--- @author FloatingRoom
+-- @author TheFloatingRoom
 -- @about
 --   FloatingRoom licensed tools loader
+
+local function msg(t)
+    reaper.ShowMessageBox(t, "FloatingRoom", 0)
+end
 
 local function askEmail()
     local retval, email = reaper.GetUserInputs("FloatingRoom Login", 1, "Email:", "")
@@ -13,7 +17,4 @@ end
 local email = askEmail()
 if not email then return end
 
-local url = "http://127.0.0.1:5000/auth?email=" .. email
-
-local response = reaper.CF_GetClipboard("") -- placeholder temporal
-reaper.ShowMessageBox("Connecting to FloatingRoom server for: "..email, "FloatingRoom", 0)
+msg("FloatingRoom Loader installed correctly!\nUser: "..email)
