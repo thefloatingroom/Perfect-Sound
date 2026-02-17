@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <index version="1">
-  <repository name="FloatingRoom ReaPack Repository" type="git" default="main" url="https://github.com/thefloatingroom/Perfect-Sound">
-    <category name="FloatingRoom">
-      <reapack name="FloatingRoom Loader">
-        <version name="1.0.0" author="TheFloatingRoom">
-          <source file="Scripts/FloatingRoom/FloatingRoom_Loader.lua" type="script"/>
-        </version>
-      </reapack>
-    </category>
-  </repository>
+  <metadata>
+    <name>FloatingRoom ReaPack Repository</name>
+    <author>TheFloatingRoom</author>
+    <description>FloatingRoom licensed tools</description>
+    <link>https://github.com/thefloatingroom/Perfect-Sound</link>
+  </metadata>
+
+  <category name="FloatingRoom">
+    <reapack name="FloatingRoom Loader" type="script">
+      <version name="1.0.0">
+        <source>Scripts/FloatingRoom/FloatingRoom_Loader.lua</source>
+      </version>
+    </reapack>
+  </category>
 </index>
