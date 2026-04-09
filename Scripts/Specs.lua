@@ -1,3 +1,14 @@
+-- @description Project Specs
+-- @version 1.0
+-- @author KW
+-- @readme_skip
+-- @about
+--   Show Project Specs
+-- @changelog
+-- @provides
+
+
+
 --[[retval, pist2mics = reaper.GetProjExtState(0, "MICROS", "numero")
 
 if retval==0 then
