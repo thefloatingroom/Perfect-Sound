@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<index version="1" name="Perfect Sound" 
-       url="https://github.com/thefloatingroom/Perfect-Sound/raw/main">
+<index version="1" name="Perfect Sound" url="https://github.com/thefloatingroom/Perfect-Sound/raw/main">
 
-  <category name="Scripts">
+  <category name="Perfect Sound">
 
     <reapack name="Perfect Sound - Core Loader" type="script">
       <version name="1.0.0">
