@@ -1,5 +1,9 @@
 local LICENSE_URL = "https://perfect-sound-licensing.khonnorsound.workers.dev"
 
+function getHWID()
+  return reaper.GetOS() .. "_" .. reaper.GetAppVersion()
+end
+
 local function saveToken(token)
   reaper.SetExtState("PerfectSound", "token", token, true)
 end
