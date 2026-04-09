@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<index version="1" name="Perfect Sound" url="https://github.com/thefloatingroom/Perfect-Sound/raw/main">
+<index version="1">
 
   <category name="Perfect Sound">
 
     <reapack name="Perfect Sound - Core Loader" type="script">
       <version name="1.0.0">
-        <source main="Core/loader.lua"/>
+        <source file="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Core/loader.lua"/>
       </version>
     </reapack>
 
     <reapack name="Perfect Sound - Main" type="script">
       <version name="1.0.0">
-        <source main="Scripts/PerfectSound_Main.lua"/>
+        <source file="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/PerfectSound_Main.lua"/>
       </version>
     </reapack>
 
