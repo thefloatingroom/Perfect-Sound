@@ -19,6 +19,13 @@
         </version>
       </versions>
     </package>
+    <package name="Perfect Sound - Script X">
+      <versions>
+        <version name="1.0.0">
+          <source uri="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/Specs.lua"/>
+        </version>
+      </versions>
+    </package>   
 
   </reapack>
 
