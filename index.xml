@@ -1,19 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1">
+<index version="1" name="Perfect Sound">
 
-  <category name="Scripts">
+  <!-- ========================= -->
+  <!-- CORE -->
+  <!-- ========================= -->
+  <category name="Core">
 
-    <reapack name="Core Loader" type="script">
-      <version name="1.0" author="You" time="2026-01-01T00:00:00Z">
+    <reapack name="Perfect Sound - License" type="script">
+      <metadata>
+        <description><![CDATA[Core license / initialization file]]></description>
+      </metadata>
+      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
         <changelog><![CDATA[Initial release]]></changelog>
-        <source main="main">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Core/license.lua</source>
+        <source main="true">
+          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Core/license.lua
+        </source>
       </version>
     </reapack>
 
-    <reapack name="Main Script" type="script">
-      <version name="1.0" author="You" time="2026-01-01T00:00:00Z">
+  </category>
+
+  <!-- ========================= -->
+  <!-- SCRIPTS -->
+  <!-- ========================= -->
+  <category name="Scripts">
+
+    <reapack name="Perfect Sound - Specs" type="script">
+      <metadata>
+        <description><![CDATA[Main Specs script]]></description>
+      </metadata>
+      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
         <changelog><![CDATA[Initial release]]></changelog>
-        <source main="main">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/Specs.lua</source>
+        <source main="true">
+          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/Specs.lua
+        </source>
+      </version>
+    </reapack>
+
+  </category>
+
+  <!-- ========================= -->
+  <!-- UTILS -->
+  <!-- ========================= -->
+  <category name="Utils">
+
+    <reapack name="Perfect Sound - Helpers" type="script">
+      <metadata>
+        <description><![CDATA[Utility helper functions]]></description>
+      </metadata>
+      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="true">
+          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Utils/helpers.lua
+        </source>
       </version>
     </reapack>
 
