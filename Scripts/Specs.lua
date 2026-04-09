@@ -33,6 +33,8 @@ end--]]
 
 --os.execute("cp " .. scriptspath .. " " .. localscriptspath)
 
+reaper.ShowConsoleMsg("Script cargado correctamente\n")
+
 dofile(reaper.GetResourcePath() .. "/Scripts/Perfect-Sound/Core/license.lua")
 
 if not checkLicense() then
