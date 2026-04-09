@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<index version="1">
+<index version="1" name="Perfect Sound" 
+       url="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/">
 
   <reapack name="Perfect Sound Scripts">
 
     <package name="Perfect Sound - Core Loader">
       <versions>
         <version name="1.0.0">
-          <source uri="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Core/loader.lua"/>
+          <source file="Core/loader.lua"/>
         </version>
       </versions>
     </package>
@@ -14,7 +15,7 @@
     <package name="Perfect Sound - Main Script">
       <versions>
         <version name="1.0.0">
-          <source uri="https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/PerfectSound_Main.lua"/>
+          <source file="Scripts/PerfectSound_Main.lua"/>
         </version>
       </versions>
     </package>
