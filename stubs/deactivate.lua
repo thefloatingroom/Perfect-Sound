@@ -1,5 +1,3 @@
 -- Perfect Sound - Deactivate this device
--- Releases this computer's binding so the license can be activated on
--- another machine. This file is harmless on its own.
-PERFECT_SOUND_ACTION = "deactivate"
+PERFECT_SOUND_ACTION = "Deactivate"
 dofile(reaper.GetResourcePath() .. "/Scripts/PerfectSound/Core/loader.lua")
