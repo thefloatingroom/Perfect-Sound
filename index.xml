@@ -19,7 +19,7 @@ and never written to disk.
 
   <category name="Core">
 
-    <reapack name="loader" type="script" desc="Perfect Sound Loader">
+    <reapack name="loader.lua" type="script" desc="Perfect Sound Loader">
       <metadata>
         <description><![CDATA[
 The Perfect Sound loader. Handles authentication, license validation,
@@ -35,7 +35,7 @@ copying the cache file to another machine does not transfer the license.
       </metadata>
       <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
         <changelog><![CDATA[Initial release of the v2 loader (HMAC-keystream encrypted bundles, in-memory execution, real HWID binding).]]></changelog>
-        <source main="true">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/loader.lua</source>
+        <source main="true" file="loader.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/loader.lua</source>
       </version>
     </reapack>
 
