@@ -1,58 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Perfect Sound">
 
-  <!-- ========================= -->
-  <!-- CORE -->
-  <!-- ========================= -->
-  <category name="Core">
+  <metadata>
+    <description><![CDATA[
+# Perfect Sound
 
-    <reapack name="Perfect Sound - License" type="script">
+Professional REAPER toolkit. Requires a valid Perfect Sound license.
+
+Visit https://perfectsound.example to purchase a license. After install,
+run any Perfect Sound action from the Action List — you will be prompted
+for your email and password on first run.
+
+All scripts are streamed from the licensing server, decrypted in memory,
+and never written to disk.
+    ]]></description>
+    <link rel="website">https://perfectsound.example</link>
+  </metadata>
+
+  <category name="Perfect Sound">
+
+    <reapack name="Perfect Sound Loader" type="script" desc="Perfect Sound Loader">
       <metadata>
-        <description><![CDATA[Core license / initialization file]]></description>
+        <description><![CDATA[
+The Perfect Sound loader. Handles authentication, license validation,
+and in-memory execution of all Perfect Sound scripts.
+
+This is the ONLY file that ships publicly. Paid scripts are served
+encrypted from the licensing server and never touch disk.
+
+On first run, prompts for the email and password tied to your license.
+Credentials are cached locally encrypted with a hardware-bound key, so
+copying the cache file to another machine does not transfer the license.
+        ]]></description>
       </metadata>
-      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source main="true">
-          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Core/license.lua
-        </source>
-      </version>
-    </reapack>
-
-  </category>
-
-  <!-- ========================= -->
-  <!-- SCRIPTS -->
-  <!-- ========================= -->
-  <category name="Scripts">
-
-    <reapack name="Perfect Sound - Specs" type="script">
-      <metadata>
-        <description><![CDATA[Main Specs script]]></description>
-      </metadata>
-      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source main="true">
-          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Scripts/Specs.lua
-        </source>
-      </version>
-    </reapack>
-
-  </category>
-
-  <!-- ========================= -->
-  <!-- UTILS -->
-  <!-- ========================= -->
-  <category name="Utils">
-
-    <reapack name="Perfect Sound - Helpers" type="script">
-      <metadata>
-        <description><![CDATA[Utility helper functions]]></description>
-      </metadata>
-      <version name="1.0" author="Perfect Sound" time="2026-01-01T00:00:00Z">
-        <changelog><![CDATA[Initial release]]></changelog>
-        <source main="true">
-          https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/Utils/helpers.lua
-        </source>
+      <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
+        <changelog><![CDATA[Initial release of the v2 loader (HMAC-keystream encrypted bundles, in-memory execution, real HWID binding).]]></changelog>
+        <source main="true">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/loader.lua</source>
       </version>
     </reapack>
 
