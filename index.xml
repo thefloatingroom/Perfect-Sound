@@ -12,21 +12,19 @@ run any Perfect Sound action from the Action List - you will be prompted
 for your email and password on first run.
 
 All scripts are streamed from the licensing server, decrypted in memory,
-and never written to disk.
+and never written to disk. Installing a script without a valid license
+will simply do nothing when run.
     ]]></description>
     <link rel="website">https://perfectsound.example</link>
   </metadata>
 
   <category name="Core">
 
-    <reapack name="loader.lua" type="script" desc="Perfect Sound Loader">
+    <reapack name="loader.lua" type="script" desc="Perfect Sound Loader (required)">
       <metadata>
         <description><![CDATA[
-The Perfect Sound loader. Handles authentication, license validation,
-and in-memory execution of all Perfect Sound scripts.
-
-This is the ONLY file that ships publicly. Paid scripts are served
-encrypted from the licensing server and never touch disk.
+The Perfect Sound loader. Required by every Perfect Sound script.
+Install this first.
 
 On first run, prompts for the email and password tied to your license.
 Credentials are cached locally encrypted with a hardware-bound key, so
@@ -34,11 +32,33 @@ copying the cache file to another machine does not transfer the license.
         ]]></description>
       </metadata>
       <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
-        <changelog><![CDATA[Initial release of the v2 loader (HMAC-keystream encrypted bundles, in-memory execution, real HWID binding).]]></changelog>
+        <changelog><![CDATA[Initial release of the v2 loader.]]></changelog>
         <source main="true" file="loader.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/loader.lua</source>
       </version>
     </reapack>
 
+  </category>
+
+  <category name="Editing">
+
+    <reapack name="specs.lua" type="script" desc="Specs - scene/region inspector">
+      <metadata>
+        <description><![CDATA[
+Specs - inspect scenes, regions and markers in your project.
+
+Requires a Perfect Sound license that includes the Specs script.
+Without authorization, running this action will silently do nothing.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
+        <changelog><![CDATA[Initial release.]]></changelog>
+        <source main="true" file="specs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/specs.lua</source>
+      </version>
+    </reapack>
+
+  </category>
+
+  <category name="Tools">
   </category>
 
 </index>
