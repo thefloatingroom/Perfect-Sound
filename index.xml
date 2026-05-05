@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Perfect Sound">
+<index version="1" name="PerfectSound">
 
   <metadata>
     <description><![CDATA[
@@ -7,26 +7,12 @@
 
 Professional REAPER toolkit. Requires a valid Perfect Sound license.
 
-Visit https://perfectsound.example to purchase a license. After install,
-run any Perfect Sound action from the Action List — you will be prompted
+After install, run any Perfect Sound action from the Action List - you will be prompted
 for your email and password on first run.
 
-All scripts are streamed from the licensing server, decrypted in memory,
-and never written to disk.
-    ]]></description>
-    <link rel="website">https://perfectsound.example</link>
-  </metadata>
-
-  <category name="Perfect Sound">
-
-    <reapack name="Perfect Sound Loader" type="script" desc="Perfect Sound Loader">
-      <metadata>
-        <description><![CDATA[
 The Perfect Sound loader. Handles authentication, license validation,
 and in-memory execution of all Perfect Sound scripts.
 
-This is the ONLY file that ships publicly. Paid scripts are served
-encrypted from the licensing server and never touch disk.
 
 On first run, prompts for the email and password tied to your license.
 Credentials are cached locally encrypted with a hardware-bound key, so
