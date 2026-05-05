@@ -39,6 +39,31 @@ copying the cache file to another machine does not transfer the license.
 
   </category>
 
+  <category name="Account">
+
+    <reapack name="deactivate.lua" type="script" desc="Perfect Sound: Deactivate this device">
+      <metadata>
+        <description><![CDATA[
+Releases this computer's Perfect Sound license binding.
+
+Use this when you want to move your license to another computer
+in a clean way (recommended before selling, lending, or formatting
+this machine). After deactivating, just sign in normally on the new
+computer.
+
+You do NOT need this script for the normal case of moving between
+two computers — simply running any Perfect Sound script on the new
+machine and signing in will release the previous device automatically.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-05T00:00:00Z">
+        <changelog><![CDATA[Initial release.]]></changelog>
+        <source main="true" file="deactivate.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/deactivate.lua</source>
+      </version>
+    </reapack>
+
+  </category>
+
   <category name="Editing">
 
     <reapack name="specs.lua" type="script" desc="Specs - scene/region inspector">

@@ -555,6 +555,37 @@ local function do_login(creds, hwid)
   return sess
 end
 
+-- Deactivate this device on the server. Tries with the cached session first;
+-- falls back to email + password if there is no session (e.g. customer
+-- already lost it).
+local function do_deactivate()
+  local sess = load_session()
+  local body = {}
+  if sess and sess.session_token then
+    body.session_token = sess.session_token
+  else
+    -- Need email + password to authenticate the deactivate request.
+    local hwid = detect_hwid()
+    local creds = load_creds(hwid)
+    if not creds then
+      creds = prompt_creds()
+      if not creds then return nil, "user_cancelled" end
+    end
+    body.email = creds.email
+    body.password = creds.password
+  end
+
+  local resp, err = http_post_json(API_BASE .. "/api/deactivate", body)
+  if not resp then return nil, err or "network" end
+  if not resp.ok then return nil, resp.error or "deactivate_failed" end
+
+  -- Server confirmed: clear local state too, so this machine truly stops
+  -- having a working install until the customer logs in again.
+  clear_session()
+  clear_creds()
+  return true
+end
+
 -- Returns a valid session, prompting for creds if needed. Handles cred
 -- rotation transparently.
 local function get_or_create_session(hwid)
@@ -612,7 +643,98 @@ local function fetch_and_run(slug, sess)
 end
 
 -- =========================================================================
--- 16. Main
+-- 16. Friendly error mapping
+-- =========================================================================
+-- The server returns short machine-readable codes (e.g. "license_inactive").
+-- Customers see this loader, not the API, so we translate codes into clear
+-- messages and trigger any side effects that should happen when a given
+-- error appears.
+
+local SUPPORT_EMAIL = "pconesa@perfectsound.es"
+
+local function friendly_error(code)
+  if not code then code = "unknown" end
+  code = tostring(code)
+
+  if code == "license_inactive" then
+    return "Your Perfect Sound license is currently paused.\n\n" ..
+           "Please contact support to reactivate it:\n" ..
+           SUPPORT_EMAIL
+  end
+  if code == "license_revoked" then
+    return "Your Perfect Sound license has been revoked.\n\n" ..
+           "Please contact support if you believe this is a mistake:\n" ..
+           SUPPORT_EMAIL
+  end
+  if code == "device_mismatch" then
+    return "This license is currently active on a different computer.\n\n" ..
+           "Run any Perfect Sound script and sign in again to move your " ..
+           "license to this machine. The previous device will be released " ..
+           "automatically.\n\n" ..
+           "If you would prefer to release the previous device explicitly, " ..
+           "use the action \"Perfect Sound: Deactivate this device\" on " ..
+           "that computer first.\n\n" ..
+           "Need help? " .. SUPPORT_EMAIL
+  end
+  if code == "not_authorized" then
+    return "Your license does not include this script.\n\n" ..
+           "Contact support to add it to your plan:\n" .. SUPPORT_EMAIL
+  end
+  if code == "invalid_credentials" then
+    return "Invalid email or password.\n\n" ..
+           "Please double-check the credentials sent to your email when " ..
+           "you purchased your license. If you have lost them, contact " ..
+           "support:\n" .. SUPPORT_EMAIL
+  end
+  if code == "invalid_session" or code == "mac_mismatch" or code == "hash_mismatch" then
+    return "Your session has expired or is invalid.\n\n" ..
+           "Please run the script again - you will be asked to sign in."
+  end
+  if code == "bundle_unavailable" then
+    return "This script is temporarily unavailable.\n\n" ..
+           "Please try again in a few minutes. If the issue persists, " ..
+           "contact support:\n" .. SUPPORT_EMAIL
+  end
+  if code == "network" or code == "no_response" or code == "tempfile_write_failed" then
+    return "Could not reach the Perfect Sound server.\n\n" ..
+           "Please check your internet connection and try again. If the " ..
+           "problem persists, contact support:\n" .. SUPPORT_EMAIL
+  end
+  if code:sub(1, 9) == "bad_json:" or code:sub(1, 11) == "load_error:" or
+     code:sub(1, 14) == "runtime_error:" then
+    return "An unexpected error occurred running this script:\n\n" .. code ..
+           "\n\nPlease contact support:\n" .. SUPPORT_EMAIL
+  end
+
+  -- Fallback: include the raw code so support can diagnose.
+  return "An unexpected error occurred:\n\n" .. code ..
+         "\n\nPlease contact support:\n" .. SUPPORT_EMAIL
+end
+
+-- Some error codes imply that local state is now stale and should be
+-- cleaned up before the next run.
+local function handle_error_side_effects(code)
+  if code == "license_revoked" then
+    -- License is dead: cached credentials and session are useless. Clearing
+    -- credentials means the next run won't auto-relogin with a dead account.
+    clear_creds()
+    clear_session()
+  elseif code == "license_inactive" then
+    -- Pause is reversible (admin can re-activate). Clear only the session
+    -- so the next run does a fresh login that picks up the new status.
+    clear_session()
+  elseif code == "device_mismatch" then
+    -- The license was rebound elsewhere; our session is now inconsistent.
+    clear_session()
+  elseif code == "invalid_credentials" then
+    -- The cached credentials no longer match (password reset, account gone).
+    clear_creds()
+    clear_session()
+  end
+end
+
+-- =========================================================================
+-- 17. Main
 -- =========================================================================
 --
 -- This loader is meant to be invoked by per-script stubs. Each stub that
@@ -622,17 +744,48 @@ end
 -- Usage from a stub script (1-line entry point installed by ReaPack):
 --
 --    PERFECT_SOUND_RUN = "specs"
---    dofile(reaper.GetResourcePath() .. "/Scripts/PerfectSound/loader.lua")
+--    dofile(reaper.GetResourcePath() .. "/Scripts/PerfectSound/Core/loader.lua")
 --
 -- If PERFECT_SOUND_RUN is not set, the loader logs in and lists available
 -- scripts (handy for first install).
 
 local function main()
+  -- Branch 1: Deactivate this device. Triggered by a stub setting
+  -- PERFECT_SOUND_ACTION = "deactivate". This does NOT need a working
+  -- session: if cached creds exist they're used, otherwise the user is
+  -- prompted for email/password.
+  if PERFECT_SOUND_ACTION == "deactivate" then
+    local confirm = reaper.ShowMessageBox(
+      "Release this computer from your Perfect Sound license?\n\n" ..
+      "After deactivating, you will not be able to run Perfect Sound " ..
+      "scripts on this machine until you sign in again. You will then " ..
+      "be free to activate the license on a different computer.",
+      "Perfect Sound - Deactivate device",
+      1   -- 1 = OK / Cancel
+    )
+    if confirm ~= 1 then return end   -- 1 = OK pressed
+
+    local ok, err = do_deactivate()
+    if not ok then
+      if err == "user_cancelled" then return end
+      handle_error_side_effects(err)
+      reaper.ShowMessageBox(friendly_error(err), "Perfect Sound", 0)
+      return
+    end
+    reaper.ShowMessageBox(
+      "This computer has been released.\n\n" ..
+      "You can now sign in on another machine.",
+      "Perfect Sound", 0
+    )
+    return
+  end
+
   local hwid = detect_hwid()
   local sess, err = get_or_create_session(hwid)
   if not sess then
     if err == "user_cancelled" then return end
-    reaper.ShowMessageBox("Sign-in failed: " .. tostring(err), "Perfect Sound", 0)
+    handle_error_side_effects(err)
+    reaper.ShowMessageBox(friendly_error(err), "Perfect Sound", 0)
     return
   end
 
@@ -667,8 +820,8 @@ local function main()
       if sess then ok, err2 = fetch_and_run(slug, sess) end
     end
     if not ok then
-      reaper.ShowMessageBox("Failed to run " .. slug .. ": " .. tostring(err2),
-                            "Perfect Sound", 0)
+      handle_error_side_effects(err2)
+      reaper.ShowMessageBox(friendly_error(err2), "Perfect Sound", 0)
     end
   end
 end
