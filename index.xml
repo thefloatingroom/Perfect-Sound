@@ -41,7 +41,7 @@ copying the cache file to another machine does not transfer the license.
 
   <category name="Tools">
 
-    <reapack name="specs.lua" type="script" desc="Specs - scene/region inspector">
+    <reapack name="Specs.lua" type="script" desc="Specs - scene/region inspector">
       <metadata>
         <description><![CDATA[
 Specs - inspect scenes, regions and markers in your project.
@@ -52,11 +52,11 @@ Without authorization, running this action will silently do nothing.
       </metadata>
       <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
         <changelog><![CDATA[Initial release.]]></changelog>
-        <source main="true" file="specs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/specs.lua</source>
+        <source main="true" file="Specs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Specs.lua</source>
       </version>
     </reapack>
 
-    <reapack name="deactivate.lua" type="script" desc="Perfect Sound: Deactivate this device">
+    <reapack name="Deactivate.lua" type="script" desc="Perfect Sound: Deactivate this device">
       <metadata>
         <description><![CDATA[
 Releases this computer's Perfect Sound license binding.
@@ -73,7 +73,7 @@ machine and signing in will release the previous device automatically.
       </metadata>
       <version name="1.0.0" author="Perfect Sound" time="2026-05-05T00:00:00Z">
         <changelog><![CDATA[Initial release.]]></changelog>
-        <source main="true" file="deactivate.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/deactivate.lua</source>
+        <source main="true" file="Deactivate.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Deactivate.lua</source>
       </version>
     </reapack>
 
