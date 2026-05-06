@@ -119,6 +119,20 @@ Requires a Perfect Sound license that includes Contar Items.
       </version>
     </reapack>
 
+      <reapack name="Delete Selection.lua" type="script" desc="Delete Selection">
+      <metadata>
+        <description><![CDATA[
+Delete Selection
+
+Requires a Perfect Sound license that includes Delete Selection.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:24:26Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Delete Selection.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Delete%20Selection.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
