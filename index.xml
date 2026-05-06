@@ -259,6 +259,20 @@ Requires a Perfect Sound license that includes Trim Clip End To Cursor.
       </version>
     </reapack>
 
+      <reapack name="Trim Clip Start To Cursor.lua" type="script" desc="Trim Clip Start To Cursor">
+      <metadata>
+        <description><![CDATA[
+ Elimina items o selección de items desde el princicio del item hasta el cursor, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes Trim Clip Start To Cursor.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:46:57Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Trim Clip Start To Cursor.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Trim%20Clip%20Start%20To%20Cursor.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
