@@ -175,6 +175,20 @@ Requires a Perfect Sound license that includes D-Noise.
       </version>
     </reapack>
 
+      <reapack name="D-Plosive.lua" type="script" desc="D-Plosive">
+      <metadata>
+        <description><![CDATA[
+ Inserta RX D-Plosive en items o selección de items, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes D-Plosive.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:36:22Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="D-Plosive.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/D-Plosive.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
