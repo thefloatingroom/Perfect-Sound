@@ -189,6 +189,20 @@ Requires a Perfect Sound license that includes D-Plosive.
       </version>
     </reapack>
 
+      <reapack name="Mouth D-Click.lua" type="script" desc="Mouth D-Click">
+      <metadata>
+        <description><![CDATA[
+ Inserta RX Mouth D-Click en items o selección de items, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes Mouth D-Click.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:37:33Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Mouth D-Click.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Mouth%20D-Click.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
