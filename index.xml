@@ -105,6 +105,20 @@ Requires a Perfect Sound license that includes the QA Tool.
       </version>
     </reapack>
 
+      <reapack name="Contar Items.lua" type="script" desc="Contar Items">
+      <metadata>
+        <description><![CDATA[
+Count selected items
+
+Requires a Perfect Sound license that includes Contar Items.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:21:42Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Contar Items.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Contar%20Items.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
