@@ -411,17 +411,47 @@ local function b64encode(data)
 end
 
 -- =========================================================================
--- 10. HTTP — curl with body in temp file (NO shell-quoted body)
+-- 10. HTTP — curl with body in temp file
 -- =========================================================================
 
+local function is_windows()
+  local s = reaper.GetOS() or ""
+  return s:find("Win") ~= nil
+end
+
+-- Cross-platform tempfile path. os.tmpname() in Windows returns a relative
+-- path like "\sNNN" that lands at the root of the current drive (C:\sNNN),
+-- which is unwritable for non-admin users. We build a proper absolute path
+-- inside the user's temp directory.
+local function make_tempfile_path()
+  if is_windows() then
+    local tmpdir = os.getenv("TEMP") or os.getenv("TMP")
+    if not tmpdir or tmpdir == "" then
+      -- Last resort: REAPER's own resource path (always writable)
+      tmpdir = reaper.GetResourcePath()
+    end
+    -- math.random gives us enough uniqueness for short-lived files
+    return string.format("%s\\ps_%d_%d.tmp",
+      tmpdir, os.time(), math.random(100000, 999999))
+  end
+  -- On macOS / Linux, os.tmpname() works correctly (returns absolute paths)
+  return os.tmpname()
+end
+
+-- Shell-quote a path or URL for the current OS.
+-- POSIX (mac/linux) uses single quotes.
+-- Windows cmd.exe uses double quotes; backslashes don't need escaping inside
+-- them (paths like C:\Users\... are fine), but a literal " has to be doubled.
 local function shell_quote(s)
-  -- POSIX-safe single-quote wrap.
+  if is_windows() then
+    return '"' .. s:gsub('"', '""') .. '"'
+  end
   return "'" .. s:gsub("'", "'\\''") .. "'"
 end
 
 local function http_post_json(url, body_table)
-  local body_path = os.tmpname()
-  local resp_path = os.tmpname()
+  local body_path = make_tempfile_path()
+  local resp_path = make_tempfile_path()
 
   if not file_write(body_path, json_encode(body_table)) then
     return nil, "tempfile_write_failed"

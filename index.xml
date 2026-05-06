@@ -31,8 +31,8 @@ Credentials are cached locally encrypted with a hardware-bound key, so
 copying the cache file to another machine does not transfer the license.
         ]]></description>
       </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
-        <changelog><![CDATA[Initial release of the v2 loader.]]></changelog>
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-06T18:28:48Z">
+        <changelog><![CDATA[Windows fix: tempfile path and shell quoting on Windows.]]></changelog>
         <source main="true" file="loader.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/loader.lua</source>
       </version>
     </reapack>
