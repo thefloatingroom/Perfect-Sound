@@ -133,6 +133,20 @@ Requires a Perfect Sound license that includes Delete Selection.
       </version>
     </reapack>
 
+      <reapack name="Consolidate.lua" type="script" desc="Consolidate">
+      <metadata>
+        <description><![CDATA[
+ Consolida items o selección de items, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes Consolidate.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:34:21Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Consolidate.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Consolidate.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
