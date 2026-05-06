@@ -273,6 +273,20 @@ Requires a Perfect Sound license that includes Trim Clip Start To Cursor.
       </version>
     </reapack>
 
+      <reapack name="Trim Clip To Selection.lua" type="script" desc="Trim Clip To Selection">
+      <metadata>
+        <description><![CDATA[
+ Ajusta el tamaño del item desde el princicio y final del item hasta la selección, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes Trim Clip To Selection.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:48:15Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Trim Clip To Selection.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Trim%20Clip%20To%20Selection.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
