@@ -245,6 +245,20 @@ Requires a Perfect Sound license that includes Split Selection.
       </version>
     </reapack>
 
+      <reapack name="Trim Clip End To Cursor.lua" type="script" desc="Trim Clip End To Cursor">
+      <metadata>
+        <description><![CDATA[
+ Elimina items o selección de items desde el cursor hasta el final, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes Trim Clip End To Cursor.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:46:09Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Trim Clip End To Cursor.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Trim%20Clip%20End%20To%20Cursor.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
