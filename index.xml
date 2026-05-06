@@ -77,6 +77,20 @@ machine and signing in will release the previous device automatically.
       </version>
     </reapack>
 
+      <reapack name="ScriptTextFinder.lua" type="script" desc="Script Text Finder">
+      <metadata>
+        <description><![CDATA[
+Search for text inside session items.
+
+Requires a Perfect Sound license that includes the Script Text Finder.
+        ]]></description>
+      </metadata>
+      <version name="2.0.0" author="Perfect Sound" time="2026-05-05T00:00:00Z">
+        <changelog><![CDATA[Initial release.]]></changelog>
+        <source main="true" file="ScriptTextFinder.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/ScriptTextFinder.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
