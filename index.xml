@@ -147,6 +147,20 @@ Requires a Perfect Sound license that includes Consolidate.
       </version>
     </reapack>
 
+      <reapack name="D-Click.lua" type="script" desc="D-Click">
+      <metadata>
+        <description><![CDATA[
+ Inserta RX D-Click en items o selección de items, respetando los items bloqueados.
+
+Requires a Perfect Sound license that includes D-Click.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:35:18Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="D-Click.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/D-Click.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
