@@ -211,8 +211,8 @@ Requires a Perfect Sound license that includes Mouth D-Click.
 Requires a Perfect Sound license that includes D-Esser.
         ]]></description>
       </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:38:08Z">
-        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-08T15:52:34Z">
+        <changelog><![CDATA[Version 1.0.1.]]></changelog>
         <source main="true" file="D-Esser.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/D-Esser.lua</source>
       </version>
     </reapack>
