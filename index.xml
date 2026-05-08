@@ -155,8 +155,8 @@ Requires a Perfect Sound license that includes Consolidate.
 Requires a Perfect Sound license that includes D-Click.
         ]]></description>
       </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-05-06T13:35:18Z">
-        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-08T15:53:33Z">
+        <changelog><![CDATA[Version 1.0.1.]]></changelog>
         <source main="true" file="D-Click.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/D-Click.lua</source>
       </version>
     </reapack>
