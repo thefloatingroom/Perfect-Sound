@@ -295,7 +295,7 @@ Requires a Perfect Sound license that includes Trim Clip To Selection.
 Requires a Perfect Sound license that includes Time Estimation Tool.
         ]]></description>
       </metadata>
-      <version name="1.0.1" author="Perfect Sound" time="2026-05-08T09:37:26Z">
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-08T16:04:40Z">
         <changelog><![CDATA[Version 1.0.1.]]></changelog>
         <source main="true" file="Time Estimation Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Time%20Estimation%20Tool.lua</source>
       </version>
