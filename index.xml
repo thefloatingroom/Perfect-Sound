@@ -315,6 +315,20 @@ Requires a Perfect Sound license that includes EQ.
       </version>
     </reapack>
 
+      <reapack name="Consolidar a TC.lua" type="script" desc="Consolidar a TC">
+      <metadata>
+        <description><![CDATA[
+ Ajusta el tamano del item, ajustandose al TC de cada item.
+
+Requires a Perfect Sound license that includes Consolidar a TC.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-08T16:25:23Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Consolidar a TC.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Consolidar%20a%20TC.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
