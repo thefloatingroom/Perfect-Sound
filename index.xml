@@ -301,6 +301,20 @@ Requires a Perfect Sound license that includes Time Estimation Tool.
       </version>
     </reapack>
 
+      <reapack name="EQ.lua" type="script" desc="EQ">
+      <metadata>
+        <description><![CDATA[
+ Añade FabFilter Pro-Q 4 alitem seleccionado.
+
+Requires a Perfect Sound license that includes EQ.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-08T13:48:40Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="EQ.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/EQ.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
