@@ -385,6 +385,20 @@ Requires a Perfect Sound license that includes ShowScript.
       </version>
     </reapack>
 
+      <reapack name="DependenciasPS.lua" type="script" desc="DependenciasPS">
+      <metadata>
+        <description><![CDATA[
+ Revisa si todas las extensiones y scripts necesarios para utilizar el repositorio de PS están correctamente instalados en el sistema.
+
+Requires a Perfect Sound license that includes DependenciasPS.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-20T16:02:44Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="DependenciasPS.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/DependenciasPS.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
