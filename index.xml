@@ -85,7 +85,7 @@ machine and signing in will release the previous device automatically.
 Requires a Perfect Sound license that includes ScriptTextFinder.
         ]]></description>
       </metadata>
-      <version name="1.1.0" author="Perfect Sound" time="2026-05-20T21:43:04Z">
+      <version name="1.1.0" author="Perfect Sound" time="2026-05-20T21:45:43Z">
         <changelog><![CDATA[Version 1.1.0.]]></changelog>
         <source main="true" file="ScriptTextFinder.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/ScriptTextFinder.lua</source>
       </version>
