@@ -644,6 +644,26 @@ end
 -- 15. Fetch + run a bundle
 -- =========================================================================
 
+-- Returns the display name of a known REAPER extension that is NOT
+-- installed, or nil if all known extensions are present.
+-- Used to translate cryptic "attempt to call a nil value" errors from
+-- obfuscated bundles into helpful messages.
+local function detect_missing_extension()
+  -- ReaImGui: provides reaper.ImGui_*
+  if not reaper.ImGui_CreateContext then
+    return "ReaImGui"
+  end
+  -- SWS / S&M Extension: provides reaper.CF_*, reaper.BR_*, reaper.NF_*
+  if not reaper.CF_GetCommandText then
+    return "SWS"
+  end
+  -- js_ReaScriptAPI: provides reaper.JS_*
+  -- (Optional - some scripts use it, some don't. Only flag if the bundle
+  -- likely needs it, but since we don't know what the bundle uses, we only
+  -- check the two most common dependencies above.)
+  return nil
+end
+
 local function fetch_and_run(slug, sess)
   local resp, err = http_post_json(API_BASE .. "/api/package", {
     session_token = sess.session_token,
@@ -668,7 +688,21 @@ local function fetch_and_run(slug, sess)
   if not fn then return false, "load_error: " .. tostring(lerr) end
 
   local ok, rerr = pcall(fn)
-  if not ok then return false, "runtime_error: " .. tostring(rerr) end
+  if not ok then
+    -- "attempt to call a nil value" almost always means the script tried
+    -- to use a REAPER extension (ReaImGui, SWS, js_ReaScriptAPI) that the
+    -- customer hasn't installed. Detect which one and return a better code
+    -- so friendly_error can show a useful message instead of the cryptic
+    -- "nil value W" that comes from obfuscated bundles.
+    local err_str = tostring(rerr)
+    if err_str:find("attempt to call a nil value", 1, true) then
+      local missing = detect_missing_extension()
+      if missing then
+        return false, "missing_extension:" .. missing
+      end
+    end
+    return false, "runtime_error: " .. err_str
+  end
   return true
 end
 
@@ -806,6 +840,56 @@ local function main()
       "This computer has been released.\n\n" ..
       "You can now sign in on another machine.",
       "Perfect Sound", 0
+    )
+    return
+  end
+
+  -- Dependency check. Only runs when actually launching a script (not for
+  -- Deactivate, which doesn't need these extensions). Lists every missing
+  -- extension in one go so the user can install them all in a single trip
+  -- to ReaPack instead of getting hit one at a time.
+  local missing = {}
+  if not reaper.ImGui_CreateContext then
+    missing[#missing+1] = "ReaImGui"
+  end
+  if not reaper.CF_GetCommandText then
+    missing[#missing+1] = "SWS Extension"
+  end
+  if not reaper.JS_Dialog_BrowseForSaveFile then
+    missing[#missing+1] = "js_ReaScriptAPI"
+  end
+
+  if #missing > 0 then
+    local lines = {
+      "Perfect Sound scripts require the following extension(s) which are",
+      "not installed on this machine:",
+      "",
+    }
+    for _, name in ipairs(missing) do
+      lines[#lines+1] = "  - " .. name
+    end
+    lines[#lines+1] = ""
+    lines[#lines+1] = "How to install:"
+    lines[#lines+1] = ""
+    if table.concat(missing, ","):find("SWS") then
+      lines[#lines+1] = "  SWS Extension: download from https://www.sws-extension.org"
+      lines[#lines+1] = "  and run the installer."
+      lines[#lines+1] = ""
+    end
+    if table.concat(missing, ","):find("ReaImGui") or table.concat(missing, ","):find("js_ReaScriptAPI") then
+      lines[#lines+1] = "  ReaImGui / js_ReaScriptAPI: in REAPER, go to"
+      lines[#lines+1] = "  Extensions > ReaPack > Browse packages, search the name,"
+      lines[#lines+1] = "  right-click > Install, then Apply."
+      lines[#lines+1] = ""
+    end
+    lines[#lines+1] = "After installing, restart REAPER and try again."
+    lines[#lines+1] = ""
+    lines[#lines+1] = "Need help? " .. SUPPORT_EMAIL
+
+    reaper.ShowMessageBox(
+      table.concat(lines, "\n"),
+      "Perfect Sound - missing extensions",
+      0
     )
     return
   end
