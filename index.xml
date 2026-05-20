@@ -343,6 +343,20 @@ Requires a Perfect Sound license that includes Copy_IO_Setup.
       </version>
     </reapack>
 
+      <reapack name="Paste_IO_Setup.lua" type="script" desc="Paste_IO_Setup">
+      <metadata>
+        <description><![CDATA[
+ Pega las entradas, salidas y envíos (con sus niveles) copiadas anteriormente con Copy IO Setup.
+
+Requires a Perfect Sound license that includes Paste_IO_Setup.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-20T09:32:48Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Paste_IO_Setup.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Paste_IO_Setup.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
