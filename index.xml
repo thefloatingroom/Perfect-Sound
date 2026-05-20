@@ -371,6 +371,20 @@ Requires a Perfect Sound license that includes Export_to_QA.
       </version>
     </reapack>
 
+      <reapack name="ShowScript.lua" type="script" desc="ShowScript">
+      <metadata>
+        <description><![CDATA[
+ Muestra en una ventana externa las notas del item que contienen el guion.
+
+Requires a Perfect Sound license that includes ShowScript.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-20T15:14:32Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="ShowScript.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/ShowScript.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
