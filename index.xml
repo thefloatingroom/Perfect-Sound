@@ -357,6 +357,20 @@ Requires a Perfect Sound license that includes Paste_IO_Setup.
       </version>
     </reapack>
 
+      <reapack name="Export_to_QA.lua" type="script" desc="Export_to_QA">
+      <metadata>
+        <description><![CDATA[
+ Exporta las pistas seleccionadas a QA, siendo posible hacer una selección multipista y mantener el Timecode de la sesión original.
+
+Requires a Perfect Sound license that includes Export_to_QA.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-05-20T11:04:43Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Export_to_QA.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Export_to_QA.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
