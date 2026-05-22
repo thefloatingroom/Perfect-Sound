@@ -94,13 +94,13 @@ Requires a Perfect Sound license that includes ScriptTextFinder.
       <reapack name="QA Tool.lua" type="script" desc="QA Tool">
       <metadata>
         <description><![CDATA[
-Quality control toolkit for VO/LOC/ALT items, with LUFS and TP analysis.
+ Herramienta para realizar diferentes checks de QA.
 
-Requires a Perfect Sound license that includes the QA Tool.
+Requires a Perfect Sound license that includes QA Tool.
         ]]></description>
       </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-05-05T00:00:00Z">
-        <changelog><![CDATA[Initial release.]]></changelog>
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-22T10:30:34Z">
+        <changelog><![CDATA[Version 1.0.1.]]></changelog>
         <source main="true" file="QA Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/QA%20Tool.lua</source>
       </version>
     </reapack>
