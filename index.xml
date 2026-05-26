@@ -413,6 +413,20 @@ Requires a Perfect Sound license that includes MatchLUFs.
       </version>
     </reapack>
 
+      <reapack name="QA_Tool.lua" type="script" desc="QA_Tool">
+      <metadata>
+        <description><![CDATA[
+ Herramienta para realizar diferentes checks de QA.
+
+Requires a Perfect Sound license that includes QA_Tool.
+        ]]></description>
+      </metadata>
+      <version name="1.0.2" author="Perfect Sound" time="2026-05-26T10:10:50Z">
+        <changelog><![CDATA[Version 1.0.2.]]></changelog>
+        <source main="true" file="QA_Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/QA_Tool.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
