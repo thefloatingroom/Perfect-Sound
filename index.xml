@@ -407,8 +407,8 @@ Requires a Perfect Sound license that includes DependenciasPS.
 Requires a Perfect Sound license that includes MatchLUFs.
         ]]></description>
       </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-05-22T00:04:32Z">
-        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+      <version name="1.0.1" author="Perfect Sound" time="2026-05-26T07:15:38Z">
+        <changelog><![CDATA[Version 1.0.1.]]></changelog>
         <source main="true" file="MatchLUFs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/MatchLUFs.lua</source>
       </version>
     </reapack>
