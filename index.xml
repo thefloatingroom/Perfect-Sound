@@ -41,20 +41,6 @@ copying the cache file to another machine does not transfer the license.
 
   <category name="Tools">
 
-    <reapack name="Specs.lua" type="script" desc="Specs - scene/region inspector">
-      <metadata>
-        <description><![CDATA[
-Specs - inspect scenes, regions and markers in your project.
-
-Requires a Perfect Sound license that includes the Specs script.
-Without authorization, running this action will silently do nothing.
-        ]]></description>
-      </metadata>
-      <version name="1.0.0" author="Perfect Sound" time="2026-04-30T00:00:00Z">
-        <changelog><![CDATA[Initial release.]]></changelog>
-        <source main="true" file="Specs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Specs.lua</source>
-      </version>
-    </reapack>
 
     <reapack name="Deactivate.lua" type="script" desc="Perfect Sound: Deactivate this device">
       <metadata>
@@ -91,20 +77,7 @@ Requires a Perfect Sound license that includes ScriptTextFinder.
       </version>
     </reapack>
 
-      <reapack name="QA Tool.lua" type="script" desc="QA Tool">
-      <metadata>
-        <description><![CDATA[
- Herramienta para realizar diferentes checks de QA.
-
-Requires a Perfect Sound license that includes QA Tool.
-        ]]></description>
-      </metadata>
-      <version name="1.0.1" author="Perfect Sound" time="2026-05-22T10:30:34Z">
-        <changelog><![CDATA[Version 1.0.1.]]></changelog>
-        <source main="true" file="QA Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/QA%20Tool.lua</source>
-      </version>
-    </reapack>
-
+  
       <reapack name="Contar Items.lua" type="script" desc="Contar Items">
       <metadata>
         <description><![CDATA[
