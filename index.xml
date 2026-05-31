@@ -380,8 +380,8 @@ Requires a Perfect Sound license that includes DependenciasPS.
 Requires a Perfect Sound license that includes MatchLUFs.
         ]]></description>
       </metadata>
-      <version name="1.0.1" author="Perfect Sound" time="2026-05-26T07:15:38Z">
-        <changelog><![CDATA[Version 1.0.1.]]></changelog>
+      <version name="1.0.2" author="Perfect Sound" time="2026-05-31T22:14:56Z">
+        <changelog><![CDATA[Version 1.0.2.]]></changelog>
         <source main="true" file="MatchLUFs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/MatchLUFs.lua</source>
       </version>
     </reapack>
