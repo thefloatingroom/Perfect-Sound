@@ -400,6 +400,20 @@ Requires a Perfect Sound license that includes QA_Tool.
       </version>
     </reapack>
 
+      <reapack name="Specs.lua" type="script" desc="Specs">
+      <metadata>
+        <description><![CDATA[
+Muestra las especificaciones del proyecto
+
+Requires a Perfect Sound license that includes Specs.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-06-03T07:34:20Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Specs.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Specs.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
