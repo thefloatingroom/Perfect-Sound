@@ -414,6 +414,20 @@ Requires a Perfect Sound license that includes Specs.
       </version>
     </reapack>
 
+      <reapack name="Time_Estimation_Tool.lua" type="script" desc="Time_Estimation_Tool">
+      <metadata>
+        <description><![CDATA[
+ Permite calcular y gestionar el tiempo necesario para realizar diferentes tareas de produccion.
+
+Requires a Perfect Sound license that includes Time_Estimation_Tool.
+        ]]></description>
+      </metadata>
+      <version name="1.0.2" author="Perfect Sound" time="2026-06-12T10:26:44Z">
+        <changelog><![CDATA[Version 1.0.2.]]></changelog>
+        <source main="true" file="Time_Estimation_Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Time_Estimation_Tool.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
