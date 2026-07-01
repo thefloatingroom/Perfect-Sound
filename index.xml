@@ -305,13 +305,13 @@ Requires a Perfect Sound license that includes Consolidar a TC.
       <reapack name="Copy_IO_Setup.lua" type="script" desc="Copy_IO_Setup">
       <metadata>
         <description><![CDATA[
- Copia las entradas, salidas, envíos y recepciones (con sus niveles) de la pista seleccionada.
+ Copia entradas, salidas, envíos, recepciones y cadena de
 
 Requires a Perfect Sound license that includes Copy_IO_Setup.
         ]]></description>
       </metadata>
-      <version name="1.0.5" author="Perfect Sound" time="2026-07-01T16:02:19Z">
-        <changelog><![CDATA[Version 1.0.5.]]></changelog>
+      <version name="1.0.6" author="Perfect Sound" time="2026-07-01T21:17:24Z">
+        <changelog><![CDATA[Version 1.0.6.]]></changelog>
         <source main="true" file="Copy_IO_Setup.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Copy_IO_Setup.lua</source>
       </version>
     </reapack>
