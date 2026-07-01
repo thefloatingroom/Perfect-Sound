@@ -310,8 +310,8 @@ Requires a Perfect Sound license that includes Consolidar a TC.
 Requires a Perfect Sound license that includes Copy_IO_Setup.
         ]]></description>
       </metadata>
-      <version name="1.0.1" author="Perfect Sound" time="2026-07-01T15:06:15Z">
-        <changelog><![CDATA[Version 1.0.1.]]></changelog>
+      <version name="1.0.2" author="Perfect Sound" time="2026-07-01T15:13:14Z">
+        <changelog><![CDATA[Version 1.0.2.]]></changelog>
         <source main="true" file="Copy_IO_Setup.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Copy_IO_Setup.lua</source>
       </version>
     </reapack>
