@@ -394,8 +394,8 @@ Requires a Perfect Sound license that includes MatchLUFs.
 Requires a Perfect Sound license that includes QA_Tool.
         ]]></description>
       </metadata>
-      <version name="1.0.4" author="Perfect Sound" time="2026-06-03T11:11:30Z">
-        <changelog><![CDATA[Version 1.0.4.]]></changelog>
+      <version name="1.0.5" author="Perfect Sound" time="2026-07-08T07:17:58Z">
+        <changelog><![CDATA[Version 1.0.5.]]></changelog>
         <source main="true" file="QA_Tool.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/QA_Tool.lua</source>
       </version>
     </reapack>
