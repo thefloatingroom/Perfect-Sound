@@ -428,6 +428,20 @@ Requires a Perfect Sound license that includes Time_Estimation_Tool.
       </version>
     </reapack>
 
+      <reapack name="Export_Record.lua" type="script" desc="Export_Record">
+      <metadata>
+        <description><![CDATA[
+ Exporta el record de la sesión a 00_RECORDS. Permite elegir
+
+Requires a Perfect Sound license that includes Export_Record.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-09-23T13:36:11Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Export_Record.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Export_Record.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
