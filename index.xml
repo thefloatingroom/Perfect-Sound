@@ -456,6 +456,20 @@ Requires a Perfect Sound license that includes Set_Project_Settings.
       </version>
     </reapack>
 
+      <reapack name="Rename_regions_from_clipboard.lua" type="script" desc="Rename_regions_from_clipboard">
+      <metadata>
+        <description><![CDATA[
+ Renombra las regiones del proyecto, en orden temporal, con las líneas
+
+Requires a Perfect Sound license that includes Rename_regions_from_clipboard.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-09-29T07:40:10Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Rename_regions_from_clipboard.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Rename_regions_from_clipboard.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
