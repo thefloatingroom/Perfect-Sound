@@ -442,6 +442,20 @@ Requires a Perfect Sound license that includes Export_Record.
       </version>
     </reapack>
 
+      <reapack name="Set_Project_Settings.lua" type="script" desc="Set_Project_Settings">
+      <metadata>
+        <description><![CDATA[
+ Aplicar Project Settings estándar (timebase, resample, pitch shift, media path, notes)
+
+Requires a Perfect Sound license that includes Set_Project_Settings.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-09-29T07:39:07Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Set_Project_Settings.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Set_Project_Settings.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
