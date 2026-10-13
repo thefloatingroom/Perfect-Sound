@@ -436,8 +436,8 @@ Requires a Perfect Sound license that includes Time_Estimation_Tool.
 Requires a Perfect Sound license that includes Export_Record.
         ]]></description>
       </metadata>
-      <version name="1.1.0" author="Perfect Sound" time="2026-10-13T08:04:07Z">
-        <changelog><![CDATA[Version 1.1.0.]]></changelog>
+      <version name="1.4.0" author="Perfect Sound" time="2026-10-13T08:08:20Z">
+        <changelog><![CDATA[Version 1.4.0.]]></changelog>
         <source main="true" file="Export_Record.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Export_Record.lua</source>
       </version>
     </reapack>
