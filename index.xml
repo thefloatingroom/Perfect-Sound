@@ -484,6 +484,20 @@ Requires a Perfect Sound license that includes PS_Toggle_2_MIC.
       </version>
     </reapack>
 
+      <reapack name="PS_Set_Multi_Mic.lua" type="script" desc="PS_Set_Multi_Mic">
+      <metadata>
+        <description><![CDATA[
+ Ajustar número de micrófonos del modo multi-micro (2 a N)
+
+Requires a Perfect Sound license that includes PS_Set_Multi_Mic.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-10-15T13:54:40Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="PS_Set_Multi_Mic.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/PS_Set_Multi_Mic.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
