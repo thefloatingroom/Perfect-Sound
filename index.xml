@@ -470,6 +470,20 @@ Requires a Perfect Sound license that includes Rename_regions_from_clipboard.
       </version>
     </reapack>
 
+      <reapack name="PS_Toggle_2_MIC.lua" type="script" desc="PS_Toggle_2_MIC">
+      <metadata>
+        <description><![CDATA[
+ Script para adaptar la plantilla para grabaciones con 2 micrófonos.
+
+Requires a Perfect Sound license that includes PS_Toggle_2_MIC.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-10-15T07:52:57Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="PS_Toggle_2_MIC.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/PS_Toggle_2_MIC.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
