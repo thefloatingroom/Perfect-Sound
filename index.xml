@@ -498,6 +498,20 @@ Requires a Perfect Sound license that includes PS_Set_Multi_Mic.
       </version>
     </reapack>
 
+      <reapack name="Check_TC.lua" type="script" desc="Check_TC">
+      <metadata>
+        <description><![CDATA[
+ Script comprobar el TC respecto a los items originales.
+
+Requires a Perfect Sound license that includes Check_TC.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-10-29T11:46:26Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Check_TC.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Check_TC.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
