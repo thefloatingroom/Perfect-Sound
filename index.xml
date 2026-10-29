@@ -512,6 +512,20 @@ Requires a Perfect Sound license that includes Check_TC.
       </version>
     </reapack>
 
+      <reapack name="Consolidar_a_TC.lua" type="script" desc="Consolidar_a_TC">
+      <metadata>
+        <description><![CDATA[
+ Ajusta el tamano del item, ajustandose al TC de cada item.
+
+Requires a Perfect Sound license that includes Consolidar_a_TC.
+        ]]></description>
+      </metadata>
+      <version name="1.0.8" author="Perfect Sound" time="2026-10-29T11:47:37Z">
+        <changelog><![CDATA[Version 1.0.8.]]></changelog>
+        <source main="true" file="Consolidar_a_TC.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Consolidar_a_TC.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
