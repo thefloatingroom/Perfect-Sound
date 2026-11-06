@@ -338,8 +338,8 @@ Requires a Perfect Sound license that includes Paste_IO_Setup.
 Requires a Perfect Sound license that includes Export_to_QA.
         ]]></description>
       </metadata>
-      <version name="1.2.0" author="Perfect Sound" time="2026-06-05T13:44:36Z">
-        <changelog><![CDATA[Version 1.2.0.]]></changelog>
+      <version name="1.3.0" author="Perfect Sound" time="2026-11-06T16:46:49Z">
+        <changelog><![CDATA[Version 1.3.0.]]></changelog>
         <source main="true" file="Export_to_QA.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Export_to_QA.lua</source>
       </version>
     </reapack>
