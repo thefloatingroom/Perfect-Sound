@@ -500,6 +500,20 @@ Requires a Perfect Sound license that includes Consolidar_a_TC.
       </version>
     </reapack>
 
+      <reapack name="PerfectSound - Check repository updates.lua" type="script" desc="PerfectSound - Check repository updates">
+      <metadata>
+        <description><![CDATA[
+ Busca actualizaciones en el repositorio de Perfect Sound.
+
+Requires a Perfect Sound license that includes PerfectSound - Check repository updates.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-11-10T16:06:17Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="PerfectSound - Check repository updates.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/PerfectSound%20-%20Check%20repository%20updates.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
