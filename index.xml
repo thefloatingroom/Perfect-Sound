@@ -514,6 +514,20 @@ Requires a Perfect Sound license that includes PerfectSound - Check repository u
       </version>
     </reapack>
 
+      <reapack name="PerfectSound - Enable startup check.lua" type="script" desc="PerfectSound - Enable startup check">
+      <metadata>
+        <description><![CDATA[
+ Activa buscar actualizaciones en el repositorio de Perfect Sound.
+
+Requires a Perfect Sound license that includes PerfectSound - Enable startup check.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-11-10T16:06:50Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="PerfectSound - Enable startup check.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/PerfectSound%20-%20Enable%20startup%20check.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
