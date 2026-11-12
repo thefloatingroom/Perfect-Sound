@@ -528,6 +528,20 @@ Requires a Perfect Sound license that includes PerfectSound - Enable startup che
       </version>
     </reapack>
 
+      <reapack name="Analyze_Loudness.lua" type="script" desc="Analyze_Loudness">
+      <metadata>
+        <description><![CDATA[
+Replacement for "SWS/BR: Analyze loudness"
+
+Requires a Perfect Sound license that includes Analyze_Loudness.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-11-12T16:13:59Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="Analyze_Loudness.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/Analyze_Loudness.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
