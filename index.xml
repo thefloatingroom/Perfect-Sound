@@ -542,6 +542,20 @@ Requires a Perfect Sound license that includes Analyze_Loudness.
       </version>
     </reapack>
 
+      <reapack name="MatchLUFs_PC.lua" type="script" desc="MatchLUFs_PC">
+      <metadata>
+        <description><![CDATA[
+ Script para nivelar respecto a los items originales.
+
+Requires a Perfect Sound license that includes MatchLUFs_PC.
+        ]]></description>
+      </metadata>
+      <version name="1.0.0" author="Perfect Sound" time="2026-11-20T07:51:12Z">
+        <changelog><![CDATA[Version 1.0.0.]]></changelog>
+        <source main="true" file="MatchLUFs_PC.lua">https://raw.githubusercontent.com/thefloatingroom/Perfect-Sound/main/stubs/MatchLUFs_PC.lua</source>
+      </version>
+    </reapack>
+
   </category>
 
 </index>
